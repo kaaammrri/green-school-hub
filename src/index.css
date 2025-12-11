@@ -1,96 +1,130 @@
+@import "@fontsource/plus-jakarta-sans/400.css";
+@import "@fontsource/plus-jakarta-sans/500.css";
+@import "@fontsource/plus-jakarta-sans/600.css";
+@import "@fontsource/plus-jakarta-sans/700.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import "@fontsource/plus-jakarta-sans/700.css";
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Eco-friendly color palette */
+    --background: 60 20% 98%;
+    --foreground: 150 30% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 150 30% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 150 30% 12%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Forest Green Primary */
+    --primary: 152 45% 28%;
+    --primary-foreground: 60 20% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Earth/Terracotta Secondary */
+    --secondary: 24 40% 92%;
+    --secondary-foreground: 24 45% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Warm Muted */
+    --muted: 60 15% 93%;
+    --muted-foreground: 150 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Leaf Green Accent */
+    --accent: 142 55% 45%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 150 15% 88%;
+    --input: 150 15% 88%;
+    --ring: 152 45% 28%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Custom eco colors */
+    --eco-forest: 152 45% 28%;
+    --eco-leaf: 142 55% 45%;
+    --eco-mint: 158 45% 85%;
+    --eco-earth: 24 45% 55%;
+    --eco-sand: 40 35% 92%;
+    --eco-sky: 200 70% 55%;
+    --eco-warning: 38 92% 50%;
+    --eco-success: 142 70% 45%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Gamification colors */
+    --gold: 45 93% 47%;
+    --silver: 210 14% 73%;
+    --bronze: 30 60% 50%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Gradients */
+    --gradient-eco: linear-gradient(135deg, hsl(152 45% 28%) 0%, hsl(142 55% 45%) 100%);
+    --gradient-earth: linear-gradient(135deg, hsl(24 45% 55%) 0%, hsl(40 35% 70%) 100%);
+    --gradient-sky: linear-gradient(180deg, hsl(200 70% 55%) 0%, hsl(200 60% 75%) 100%);
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(150 30% 12% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(150 30% 12% / 0.07), 0 2px 4px -2px hsl(150 30% 12% / 0.05);
+    --shadow-lg: 0 10px 15px -3px hsl(150 30% 12% / 0.08), 0 4px 6px -4px hsl(150 30% 12% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(150 30% 12% / 0.1), 0 8px 10px -6px hsl(150 30% 12% / 0.05);
+    --shadow-glow: 0 0 40px hsl(142 55% 45% / 0.25);
 
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 60 20% 98%;
+    --sidebar-foreground: 150 30% 12%;
+    --sidebar-primary: 152 45% 28%;
+    --sidebar-primary-foreground: 60 20% 98%;
+    --sidebar-accent: 158 45% 85%;
+    --sidebar-accent-foreground: 152 45% 28%;
+    --sidebar-border: 150 15% 88%;
+    --sidebar-ring: 152 45% 28%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 150 30% 8%;
+    --foreground: 60 20% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 150 25% 12%;
+    --card-foreground: 60 20% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 150 25% 12%;
+    --popover-foreground: 60 20% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 142 55% 50%;
+    --primary-foreground: 150 30% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 24 30% 18%;
+    --secondary-foreground: 24 40% 85%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 150 20% 18%;
+    --muted-foreground: 150 15% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 142 55% 45%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 150 20% 20%;
+    --input: 150 20% 20%;
+    --ring: 142 55% 50%;
+
+    --eco-forest: 152 40% 35%;
+    --eco-leaf: 142 55% 50%;
+    --eco-mint: 158 30% 25%;
+    --eco-earth: 24 40% 45%;
+    --eco-sand: 40 20% 20%;
+
+    --sidebar-background: 150 25% 10%;
+    --sidebar-foreground: 60 20% 95%;
+    --sidebar-primary: 142 55% 50%;
+    --sidebar-primary-foreground: 150 30% 8%;
+    --sidebar-accent: 150 20% 18%;
+    --sidebar-accent-foreground: 60 20% 95%;
+    --sidebar-border: 150 20% 20%;
+    --sidebar-ring: 142 55% 50%;
   }
 }
 
@@ -100,6 +134,102 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .eco-card {
+    @apply bg-card rounded-xl border border-border shadow-md transition-all duration-300;
+  }
+
+  .eco-card-hover {
+    @apply eco-card hover:shadow-lg hover:border-primary/20 hover:-translate-y-0.5;
+  }
+
+  .eco-gradient-bg {
+    background: var(--gradient-eco);
+  }
+
+  .eco-gradient-text {
+    background: var(--gradient-eco);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-md border border-border/50 rounded-xl;
+  }
+
+  .stat-card {
+    @apply eco-card p-6 flex flex-col gap-2;
+  }
+
+  .badge-gold {
+    @apply bg-gradient-to-br from-amber-400 to-amber-600 text-white;
+  }
+
+  .badge-silver {
+    @apply bg-gradient-to-br from-slate-300 to-slate-500 text-white;
+  }
+
+  .badge-bronze {
+    @apply bg-gradient-to-br from-orange-400 to-orange-700 text-white;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  .animate-bounce-gentle {
+    animation: bounce-gentle 2s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes bounce-gentle {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--border));
+    border-radius: 3px;
   }
 }
